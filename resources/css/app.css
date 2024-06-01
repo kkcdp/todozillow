@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+
+    --primary-color: #fff;
+    --secondary-color: #000;
+
+    --black: #000000ff;
+    --salmon-pink: #ff88a2ff;
+    --light-cyan: #dafeffff;
+    --ebony: #49523dff;
+    --vanilla: #eee0aaff;
+    --mindaro: #f4ffadff;
+    --tea-green: #c9ffc2ff;
+    --nyanza: #e4ffd6ff;
+    --beige: #f3f5e0ff;
+    --dgreen:rgb(187, 233, 127);
+
+    font-family: montserrat;
+    height: 100%;
+
+}
+
+/* .background{
+    @apply bg-url: url('/public/images/HomeBackground.JPG');
+} */
+
+/* .bg-image {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    } */
+
+.badge{
+    @apply flex items-center justify-center border-solid bg-[var(--beige)] border border-[var(--ebony)]
+    rounded-full text-sm font-bold p-0 m-3 min-w-[115px]
+}
+
+.badge-important{
+    @apply flex items-center justify-center border-solid bg-[var(--beige)] border border-red-600 bg-red-100
+    rounded-full text-xs font-bold p-0 m-3 min-w-[100px] uppercase
+}
+
+.todo-card{
+    @apply inline-flex items-center justify-between bg-[var(--nyanza)] p-2 m-2 rounded-lg border-solid border
+    border-[var(--ebony)] w-[72rem] md:w-[48rem] sm:w-[34rem] xs:w-[24rem] xxs:w-[15rem]
+}
+
+.todo-show-card{
+    @apply inline-flex items-center justify-center bg-[var(--nyanza)] p-3 m-3 rounded-lg border-solid border
+    border-[var(--ebony)] w-[72rem] md:w-[48rem] sm:w-[34rem] xs:w-[24rem] xxs:w-[15rem]
+}
+
+.group-show-card{
+    @apply inline-flex items-center justify-center bg-[var(--nyanza)] p-3 rounded-lg border-solid border
+    border-[var(--ebony)] w-[11rem] h-[6rem] cursor-pointer
+    hover:shadow-md hover:border-opacity-0 transform hover:-translate-y-2 transition-all duration-300
+}
+
+.filter-card{
+    @apply inline-flex items-center justify-between bg-[var(--nyanza)] p-2 py-4 m-2 rounded-lg border-solid border
+    border-[var(--ebony)] w-[72rem] md:w-[48rem] sm:w-[34rem] xs:w-[24rem] xxs:w-[15rem]
+}
+
+
+.btn-primary {
+    @apply bg-[var(--nyanza)] hover:bg-[var(--dgreen)] border-solid border border-[var(--ebony)] rounded-lg p-2 mr-2 text-sm font-bold cursor-pointer
+}
+
+.btn-primary-login {
+    @apply bg-[var(--nyanza)] hover:bg-[var(--dgreen)] border-solid border border-[var(--ebony)] rounded-lg py-2 px-16 mx-8 text-sm font-bold cursor-pointer
+}
+
+.btn-primary-register {
+    @apply bg-[var(--nyanza)] hover:bg-[var(--dgreen)] border-solid border border-[var(--ebony)] rounded-lg py-2 mx-8 text-sm font-bold cursor-pointer
+}
+
+
+
+.taskdone{
+    @apply !bg-gray-400 cursor-pointer text-gray-500 line-through
+}
+
+.taskimportant{
+    @apply bg-[var(--salmon-pink)]
+}
+
+.main-link{
+    @apply text-lg p-3 hover:underline underline-offset-[3px] decoration-4 decoration-orange-400
+}
+
+.main-link-main-layout{
+    @apply text-lg p-3 hover:underline underline-offset-[3px] decoration-4 hover:font-bold
+}
+
+input[type="date"] {
+    background: transparent;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="time"] {
+    background: transparent;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="boolean"] {
+    background: transparent;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="text"] {
+    background: transparent;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="password"] {
+    background: transparent;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+select {
+    background: transparent;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+
+@layer components {
+    .label {
+      @apply block mb-1 text-gray-500 dark:text-gray-300 font-medium
+    }
+
+    .input {
+      @apply block w-full p-2 rounded-md shadow-sm border border-gray-300 dark:border-gray-600 text-gray-500
+    }
+
+    .btn-primary2 {
+      @apply border-solid border border-[var(--ebony)] hover:bg-[var(--tea-green)] rounded-lg p-2 mr-2 text-sm font-bold cursor-pointer
+    }
+
+
+
+
+    /* .date-picker {
+    background-color: #0080ff;
+    padding: 15px;
+    position: absolute;
+    transform: translate(-6 0%,-50%);
+    top: 50%;
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+
+    } */
+
+
+
+
+  }
