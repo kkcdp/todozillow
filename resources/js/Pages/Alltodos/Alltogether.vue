@@ -4,6 +4,7 @@
             <h1 class="flex justify-center">TODO ALLTOGETHER PAGE</h1>
         </div>
 
+
         <div class="flex flex-col items-center">
             <Filters :filters="filters"/>
         </div>
