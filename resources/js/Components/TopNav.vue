@@ -2,28 +2,34 @@
     <div class="py-6 w-full flex items-center justify-between">
         <div class="flex flex-row items-center max-[1050px]:hidden">
 
-            <div class="main-link-main-layout">
+            <div class="main-link-main-layout group">
                 <Link :href="route('home')">Home</Link>
+                <div class="links-underline"></div>
             </div>
 
-            <div v-if="!user" class="main-link-main-layout">
+            <div v-if="!user" class="main-link-main-layout group">
                 <Link :href="route('about')">About</Link>
+                <div class="links-underline"></div>
             </div>
 
-            <div class="main-link-main-layout">
+            <div class="main-link-main-layout group">
                 <Link :href="route('resources')">Resources</Link>
+                <div class="links-underline"></div>
             </div>
 
-            <div class="main-link-main-layout">
+            <div class="main-link-main-layout group">
                 <Link :href="route('blog')">Blog</Link>
+                <div class="links-underline"></div>
             </div>
 
-            <div v-if="user" class="main-link-main-layout">
+            <div v-if="user" class="main-link-main-layout group">
                 <Link :href="route('groups.index')">Todo groups</Link>
+                <div class="links-underline"></div>
             </div>
 
-            <div v-if="user" class="main-link-main-layout">
+            <div v-if="user" class="main-link-main-layout group">
                 <Link :href="route('showalltodos')">All todos</Link>
+                <div class="links-underline"></div>
             </div>
         </div>
 
@@ -53,22 +59,23 @@
 
 
 
-        <div class="flex flex-row items-center">
-            <div v-if="user" class="text-lg font-medium p-3">
+        <div class="flex flex-row items-center pr-4">
+            <div v-if="user" class="text-lg p-3 pb-4">
                 <div>Hi, {{ user.name }}!</div>
             </div>
-            <div v-else class="main-link-main-layout">
-                <Link :href="route('login')">Login</Link>
+            <div v-else class="group">
+                <Link class="main-link-main-layout" :href="route('login')">Login</Link>
+                <div class="links-underline"></div>
                 <!-- &nbsp
                 <Link :href="route('user-account.create')">Register</Link> -->
             </div>
 
-            <div v-if="user" >
-                <Link class="main-link-main-layout" :href="route('logout')" method="DELETE" as="button">Logout</Link>
+            <div v-if="user" class="group">
+                <Link class="text-lg" :href="route('logout')" method="DELETE" as="button">Logout</Link>
+                <div class="links-underline"></div>
             </div>
 
         </div>
-
 
     </div>
 </template>
