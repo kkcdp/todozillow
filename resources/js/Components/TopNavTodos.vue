@@ -62,7 +62,7 @@
                 <div>Hi, {{ user.name }}!</div>
             </div>
             <div v-else class="group">
-                <Link class="main-link" :href="route('login')">Login</Link>
+                <Link class="text-lg" :href="route('login')">Login</Link>
                 <div class="links-underline"></div>
                 <!-- &nbsp
                 <Link :href="route('user-account.create')">Register</Link> -->
@@ -116,11 +116,21 @@ const user = computed(
                 });
                 flag = false;
             })
+
+            $(".main-link").on("click", function(){
+                $('.main-link').removeClass('selected');
+                $(this).addClass('selected');
+            })
     }
   }
 </script>
 
 <style>
+
+.selected {
+    color:#F9B339;
+    font-weight: bold;
+}
 
 .nav {
   position: absolute;
