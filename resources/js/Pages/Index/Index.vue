@@ -4,7 +4,7 @@
             <h1>Welcome to my personal page !</h1>
             <h1>Here you will find more information about me and articles I care.</h1>
             <h1>Enjoy !</h1>
-            <button class="target">POGA</button>
+            <!-- <button class="target">POGA</button> -->
         </div>
 
         <!-- <div class="grid grid-cols-2 justify-items-center my-6 mx-12"> -->
@@ -33,13 +33,13 @@ import { Link } from '@inertiajs/vue3'
 </script>
 
 <script>
-    export default {
-        mounted: function() {
-            $(".target").on("click", function(){
-            alert("Sveiks no Indeks lapas :-)");
-                });
-            }
-        }
+    // export default {
+    //     mounted: function() {
+    //         $(".target").on("click", function(){
+    //         alert("Sveiks no Indeks lapas :-)");
+    //             });
+    //         }
+    //     }
 </script>
 
 

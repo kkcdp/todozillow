@@ -1,33 +1,32 @@
 <template>
     <div class="py-6 w-full flex items-center justify-between">
         <div class="flex flex-row items-center max-[1050px]:hidden">
-
-            <div class="main-link-main-layout group">
+            <div class="main-link group">
                 <Link :href="route('home')">Home</Link>
                 <div class="links-underline"></div>
             </div>
 
-            <div v-if="!user" class="main-link-main-layout group">
+            <div v-if="!user" class="main-link group">
                 <Link :href="route('about')">About</Link>
                 <div class="links-underline"></div>
             </div>
 
-            <div class="main-link-main-layout group">
+            <div class="main-link group">
                 <Link :href="route('resources')">Resources</Link>
                 <div class="links-underline"></div>
             </div>
 
-            <div class="main-link-main-layout group">
+            <div class="main-link group">
                 <Link :href="route('blog')">Blog</Link>
                 <div class="links-underline"></div>
             </div>
 
-            <div v-if="user" class="main-link-main-layout group">
+            <div v-if="user" class="main-link group">
                 <Link :href="route('groups.index')">Todo groups</Link>
                 <div class="links-underline"></div>
             </div>
 
-            <div v-if="user" class="main-link-main-layout group">
+            <div v-if="user" class="main-link group">
                 <Link :href="route('showalltodos')">All todos</Link>
                 <div class="links-underline"></div>
             </div>
@@ -64,7 +63,7 @@
                 <div>Hi, {{ user.name }}!</div>
             </div>
             <div v-else class="group">
-                <Link class="main-link-main-layout" :href="route('login')">Login</Link>
+                <Link class="main-link" :href="route('login')">Login</Link>
                 <div class="links-underline"></div>
                 <!-- &nbsp
                 <Link :href="route('user-account.create')">Register</Link> -->

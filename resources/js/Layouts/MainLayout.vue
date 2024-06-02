@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen">
         <header>
-            <div class="absolute top-0 left-0 right-0 z-10 backdrop-blur-md min-w-screen text-white">
+            <div class="absolute top-0 left-0 right-0 z-10 backdrop-blur-md min-w-screen">
                 <TopNav />
             </div>
 
