@@ -21,7 +21,6 @@
                 <div class="links-underline"></div>
             </div>
 
-
             <div v-if="user" class="main-link group">
                 <Link :href="route('groups.index')">Todo groups</Link>
                 <div class="links-underline"></div>
@@ -53,6 +52,17 @@
                 <li class="nav-item">
                     <Link class="item-anchor" :href="route('resources')">Resources</Link>
                 </li>
+                <li class="nav-item">
+                    <Link class="item-anchor" :href="route('blog')">Blog</Link>
+                </li>
+                <li v-if="user" class="nav-item">
+                    <Link class="item-anchor" :href="route('groups.index')">Todo groups</Link>
+                </li>
+                <li v-if="user" class="nav-item">
+                    <Link class="item-anchor" :href="route('showalltodos')">All todos</Link>
+                </li>
+
+
               </ul>
             </div>
         </div>
@@ -127,14 +137,14 @@ const user = computed(
 
 <style>
 
-.selected {
+/* .selected {
     color:#F9B339;
     font-weight: bold;
 }
 
 .nav {
   position: absolute;
-  /* width: auto; */
+  width: auto;
   display: inline-block;
   border: none;
 }
@@ -170,21 +180,20 @@ const user = computed(
   position: fixed;
   top: 105px;
   width: 100%;
-  min-height: 70vh;
+  min-height: 120vh;
   background-color: rgb(117, 148, 185);
-  /* backdrop-filter: blur(10px); */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
 }
 
-/* .nav-list {
+.nav-list {
   list-style: none;
-  padding: 0;
+  padding: 5px;
   position: relative;
 
-} */
+}
 
 .item-anchor:after {
   content: "";
@@ -370,6 +379,6 @@ const user = computed(
 
 .hidden {
   display: none;
-}
+} */
 
 </style>

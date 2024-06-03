@@ -1,9 +1,8 @@
 <template>
     <div>
-        <div class="w-full flex flex-col">
+        <div class="w-full flex flex-col mt-28 ">
             <h1 class="flex justify-center">TODO ALLTOGETHER PAGE</h1>
         </div>
-
 
         <div class="flex flex-col items-center">
             <Filters :filters="filters"/>

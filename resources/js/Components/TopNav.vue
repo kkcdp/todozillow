@@ -41,7 +41,7 @@
             </button>
           </div>
 
-            <div class="nav-content hideNav hidden min-[1051px]:hidden">
+          <div class="nav-content hideNav hidden min-[1050px]:hidden">
               <ul class="nav-list">
                 <li class="nav-item">
                     <Link class="item-anchor" :href="route('home')">Home</Link>
@@ -52,6 +52,17 @@
                 <li class="nav-item">
                     <Link class="item-anchor" :href="route('resources')">Resources</Link>
                 </li>
+                <li class="nav-item">
+                    <Link class="item-anchor" :href="route('blog')">Blog</Link>
+                </li>
+                <li v-if="user" class="nav-item">
+                    <Link class="item-anchor" :href="route('groups.index')">Todo groups</Link>
+                </li>
+                <li v-if="user" class="nav-item">
+                    <Link class="item-anchor" :href="route('showalltodos')">All todos</Link>
+                </li>
+
+
               </ul>
             </div>
         </div>
@@ -182,12 +193,12 @@ const user = computed(
   z-index: 999;
 }
 
-/* .nav-list {
+.nav-list {
   list-style: none;
   padding: 0;
   position: relative;
 
-} */
+}
 
 .item-anchor:after {
   content: "";
