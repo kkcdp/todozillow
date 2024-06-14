@@ -2,32 +2,32 @@
     <div class="py-6 w-full flex items-center justify-between">
         <div class="flex flex-row items-center max-[1050px]:hidden">
             <div class="main-link group">
-                <Link :href="route('home')">Home</Link>
+                <Link :href="route('home')" :class="{'selected' : $page.component === 'Index/Index' }">Home</Link>
                 <div class="links-underline"></div>
             </div>
 
             <div v-if="!user" class="main-link group">
-                <Link :href="route('about')">About</Link>
+                <Link :href="route('about')" :class="{'selected' : $page.url.startsWith('/about') }">About</Link>
                 <div class="links-underline"></div>
             </div>
 
             <div class="main-link group">
-                <Link :href="route('resources')">Resources</Link>
+                <Link :href="route('resources')" :class="{'selected' : $page.url.startsWith('/resources') }">Resources</Link>
                 <div class="links-underline"></div>
             </div>
 
             <div class="main-link group">
-                <Link :href="route('blog')">Blog</Link>
+                <Link :href="route('blog')" :class="{'selected' : $page.url.startsWith('/blog') }">Blog</Link>
                 <div class="links-underline"></div>
             </div>
 
             <div v-if="user" class="main-link group">
-                <Link :href="route('groups.index')">Todo groups</Link>
+                <Link :href="route('groups.index')" :class="{'selected' : $page.component === 'Groups/Index' }">Todo groups</Link>
                 <div class="links-underline"></div>
             </div>
 
             <div v-if="user" class="main-link group">
-                <Link :href="route('showalltodos')">All todos</Link>
+                <Link :href="route('showalltodos')" :class="{'selected' : $page.url.startsWith('/alltodos') }">All todos</Link>
                 <div class="links-underline"></div>
             </div>
         </div>
@@ -102,9 +102,8 @@ const user = computed(
 </script>
 
 <script>
-
-
     export default {
+
         mounted: function() {
           var flag = false;
           $('#btn_toggle_menu').on("click",function () {
@@ -130,23 +129,15 @@ const user = computed(
                 flag = false;
             })
 
-            $(".main-link").on("click", function(){
-                $('.main-link').removeClass('selected');
-                $(this).addClass('selected');
-            })
+            // $(".main-link").on("click", function(){
+            //     $('.main-link').removeClass('selected');
+            //     $(this).addClass('selected');
+            // })
     }
   }
 </script>
 
 <style>
-
-.selected {
-    color:#F9B339;
-    font-weight: bold;
-    /* text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-thickness: 3px; */
-}
 
 .nav {
   position: absolute;

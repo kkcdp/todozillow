@@ -19,6 +19,8 @@
     --beige: #f3f5e0ff;
     --dgreen:rgb(187, 233, 127);
     --sand-yellow: #F9B339;
+    --dark-brown:rgb(78, 52, 52);
+    --orange-200:#fed7aa;
 
     font-family: montserrat;
     height: 100%;
@@ -92,6 +94,10 @@
 
 .main-link{
     @apply text-lg p-3
+}
+
+.selected {
+    @apply text-[var(--sand-yellow)] font-extrabold
 }
 
 .links-underline {

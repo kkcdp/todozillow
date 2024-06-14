@@ -37,5 +37,5 @@
     }
   })
 
-//   defineOptions({ layout: MainLayoutTodos })
+  defineOptions({ layout: MainLayoutTodos })
   </script>

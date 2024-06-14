@@ -22,7 +22,7 @@
             </div>
 
             <div v-if="user" class="main-link group">
-                <Link :href="route('groups.index')">Todo groups</Link>
+                <Link :href="route('groups.index')" :class="{'selected' : $page.component === 'Groups/Index' }">Todo groups</Link>
                 <div class="links-underline"></div>
             </div>
 

@@ -40,7 +40,7 @@
     group: Object,
   })
 
-  defineOptions({ layout: MainLayoutTodos })
+//   defineOptions({ layout: MainLayoutTodos })
 
 
 const create = () =>form.post(route('groups.store'))

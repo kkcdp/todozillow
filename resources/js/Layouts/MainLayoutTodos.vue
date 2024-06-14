@@ -2,7 +2,7 @@
     <div class="min-h-screen">
         <header>
             <div class="absolute top-0 left-0 right-0 z-10 backdrop-blur-md">
-                <TopNav />
+                <TopNavTodos />
             </div>
 
         </header>
@@ -21,7 +21,7 @@
   <script setup>
   import { Link, usePage } from '@inertiajs/vue3'
   import { computed } from 'vue'
-  import TopNav from '@/Components/TopNav.vue';
+  import TopNavTodos from '@/Components/TopNavTodos.vue';
   import Footer from '@/Components/Footer.vue';
 
   const flashSuccess = computed(
