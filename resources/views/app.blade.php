@@ -11,7 +11,7 @@
         {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> --}}
 
         @routes
-        @vite('resources/js/app.js')
+        @vite('resources/js/app.js', 'resources/js/navanimation.js')
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
         @inertiaHead
     </head>
